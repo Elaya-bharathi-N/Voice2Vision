@@ -1,0 +1,353 @@
+* {
+    box-sizing: border-box;
+    text-align: center;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: rgba(242, 218, 139, 0.9);
+    background: url('back.avif') no-repeat center center fixed; /* Set the background image */
+    background-size: cover; /* Ensure the image covers the entire background */
+}
+
+header {
+    
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    
+}
+
+@keyframes headerAnimation {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 20px rgba(255, 255, 255, 1);
+    }
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+h1, h2 {
+    margin: 20px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.feature-flex {
+    display: flex;
+    justify-content: space-around; /* Space between features */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.feature {
+    background: rgba(242, 218, 139, 0.9); /* Adjusted color with transparency */
+    padding: 15px;
+    color: black;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px orange;
+    width: calc(20% - 20px); /* Width for five features, with some margin */
+    margin: 10px; /* Margin for spacing */
+    transition: transform 0.2s, background 0.3s;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+    background: #e0e0e0; /* Light background on hover */
+    color: #333; /* Darker text on hover */
+}
+
+.main-image-box {
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    width: 390px; /* Set a fixed width for the main image */
+    height: 430px; /* Set a fixed height for the main image */
+    overflow: hidden;
+    border-radius: 8px;
+    /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); */
+    animation: pulse 2s infinite;
+    margin: 0 auto; /* Center the image box horizontally */
+}
+
+.workflow-image p {
+    margin-top: 10px; /* Add some space above the description */
+    color: black; /* Light color for description text */
+    font-size: 0.9em; /* Smaller font size for the description */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.main-image-box img {
+    max-width: 100%; /* Keep image responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.workflow-image {
+    margin: 10px;
+    position: relative;
+    box-shadow: 0 2px 10px  rgba(242, 218, 139, 0.9);
+    transition: transform 0.2s, background 0.3s;
+    background:rgba(242, 218, 139, 0.9); /* Dark background for images with transparency */
+    border-radius: 20px;
+}
+
+.workflow-image:hover {
+    transform: scale(1.05);
+}
+
+.workflow-image img {
+    max-width: 200px; /* Set a fixed size for workflow images */
+    border-radius: 8px;
+    padding: 5px;
+}
+
+.arrow {
+    font-size: 2em;
+    color: #ffcc00; /* Yellow color for arrows */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    background: rgba(51, 51, 51, 0.9); /* Form background with transparency */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+form label {
+    margin: 5px 0;
+}
+
+form input, form textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    background: rgba(242, 218, 139, 0.9);
+    border: 1px solid rgba(242, 218, 139, 0.9);
+    border-radius: 4px;
+}
+
+form button {
+    padding: 10px;
+    background:  rgba(242, 218, 139, 0.9);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background: rgba(242, 218, 139, 0.9);
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: rgba(242, 218, 139, 0.9); /* Semi-transparent footer */
+    color: white;
+}
+
+/* Media Query for Responsive Design */
+@media (max-width: 768px) {
+    header nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .feature {
+        width: calc(45% - 20px); /* Adjust width for smaller screens */
+    }
+
+    .main-image-box {
+        width: 100%; /* Make the main image responsive on smaller screens */
+        height: auto; /* Allow height to adjust */
+    }
+}
+header h1 {
+    display: inline-block;
+}
+
+header h1 span {
+    display: inline-block;
+    animation: glowLetter 2s infinite ease-in-out;
+    animation-delay: calc(0.1s * var(--i)); /* Delay each letter's animation */
+}
+
+header h1 span:nth-child(1) { --i: 1; }
+header h1 span:nth-child(2) { --i: 2; }
+header h1 span:nth-child(3) { --i: 3; }
+header h1 span:nth-child(4) { --i: 4; }
+header h1 span:nth-child(5) { --i: 5; }
+header h1 span:nth-child(6) { --i: 6; }
+header h1 span:nth-child(7) { --i: 7; }
+header h1 span:nth-child(8) { --i: 8; }
+header h1 span:nth-child(9) { --i: 9; }
+header h1 span:nth-child(10) { --i: 10; }
+header h1 span:nth-child(11) { --i: 11; }
+header h1 span:nth-child(12) { --i: 12; }
+
+@keyframes glowLetter {
+    0%, 100% {
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.3), 0 0 10px rgba(255, 255, 255, 0.3);
+    }
+    50% {
+        text-shadow: 0 0 20px rgba(242, 218, 139, 0.9), 0 0 30px rgba(242, 218, 139, 0.9);
+    }
+}
+
+/* Style for favicon image */
+.favicon-image {
+    width: 300px; /* Control the width of the image container */
+    margin: 10px auto;
+    
+    padding-left: 50px;
+    text-align: center; /* Center image inside the container */
+}
+
+.favicon-image img {
+    max-width: 100%; /* Ensure image is responsive */
+    height: auto;
+    margin-left: 60px;
+    border-radius: 40px; /* Optional: Add rounded corners */
+   
+}
+.favicon-image img:hover {
+    box-shadow: 0 0 15px rgba(255, 255, 0, 0.8), /* Soft yellow shadow */
+                0 0 30px rgba(255, 255, 0, 0.6), /* Medium yellow shadow */
+                0 0 45px rgba(255, 255, 0, 0.4); /* Faded yellow shadow */
+                transform: translateY(-5px);
+}
+
+/* Style for app description */
+.app-description {
+    margin: 20px auto;
+    max-width:900px; /* Control the width of the description */
+    color: rgba(242, 218, 139, 0.9);
+    text-align: justify;
+}
+
+.app-description h2 {
+    margin-bottom: 30px;
+    margin-top: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    color: #ccc;
+    font-size: 1.5em;
+}
+
+.app-description p {
+    font-size: 1.4em;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.5;
+}
+
+/* Style for float effect */
+.favicon-image {
+    float: left; /* Float the image to the left */
+    margin-right: 180px; /* Add space between image and text */
+}
+
+/* Clear floats after the floated image */
+section::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+/* Section styling */
+#team {
+    padding: 40px;
+    text-align: center;
+}
+
+#team h2 {
+    margin-bottom: 30px;
+    color: #fff;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 2em;
+    text-transform: uppercase;
+}
+
+/* Team gallery row styling */
+.team-row {
+    display: block; /* Display rows as block to break them naturally */
+    margin-bottom: 20px;
+}
+
+/* Style for individual team members */
+.team-member {
+    display: inline-block; /* Display team members inline but allow wrapping */
+    width: 30%; /* Set the width for each team member */
+    margin: 10px; /* Add margin between members */
+    text-align: center; /* Center text below the image */
+}
+
+.team-member img {
+    width: 100%; /* Make the image responsive */
+    max-width: 150px; /* Set a max width for the images */
+    height: 200px; /* Keep aspect ratio */
+    border-radius: 10px; /* Circular images */
+}
+
+.team-member p {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: #fff;
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+    .team-member {
+        width: 45%; /* Make team members larger on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .team-member {
+        width: 100%; /* Make each team member full width on small screens */
+    }
+}
+
+
+

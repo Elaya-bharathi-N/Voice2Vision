@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice2Vision</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Link to your favicon -->
+    
+    <link rel="icon" href="logo.jpg" type="image/png">
+    <script src="java.js"></script>
+</head>
+<body>
+    <header>
+        <h1>
+            <span>V</span><span>o</span><span>i</span><span>c</span><span>e</span>
+            <span>2</span>
+            <span>V</span><span>i</span><span>s</span><span>i</span><span>o</span><span>n</span>
+        </h1>
+    </header>
+    <section>
+        <div class="favicon-image">
+            <img src="logo.jpg" alt="App Logo">
+        </div>
+        <div class="app-description">
+            <h2>App Overview</h2>
+            <p>Voice2Vision is an innovative app designed to bridge communication between deaf and hearing individuals. It offers real-time speech-to-sign language conversion through an avatar, enabling seamless interactions. </p>
+        </div>
+    </section>
+    <main>
+        <section id="features" class="container">
+            <h2>Key Features</h2>
+            <div class="feature-flex">
+                <div class="feature">
+                    <h3>Real-time conversion</h3><br>
+                    <p>Voice2Vision bridges the communication gap by converting spoken language into sign language in real-time, making it easier for people who don’t know sign language to interact with deaf individuals.</p>
+                </div>
+                <div class="feature">
+                    <h3>Learning platform</h3><br>
+                    <p>Our app provides a built-in learning platform for users to learn and understand sign language, promoting inclusivity and fostering better communication between the hearing and the deaf communities.</p>
+                </div>
+                <div class="feature">
+                    <h3>UI/UX</h3><br>
+                    <p>Voice2Vision has a user-friendly interface with accessibility features like adjustable font sizes, color contrast, and voice commands, catering to all users.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="images" class="container">
+            <h2>Avatar</h2>
+            <div class="main-image-box">
+                <img src="avatr1.png" alt="Main Feature Image">
+            </div><br><br>
+            <h3>Workflow</h3>
+            <div class="image-gallery">
+                <div class="workflow-image">
+                    <img src="speech1.png" alt="Workflow Step 1">
+                    <p>speech recognition, where the user's voice is captured and processed.</p>
+                </div>
+                <div class="arrow">→</div>
+                <div class="workflow-image">
+                    <img src="text1.png" alt="Workflow Step 2">
+                    <p> the recognized speech is converted to text for further processing.</p>
+                </div>
+                <div class="arrow">→</div>
+                <div class="workflow-image">
+                    <img src="conversion3.png" alt="Workflow Step 3">
+                    <p>Finally, the text is translated into sign language by the avatar for clear communication.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="container">
+            <h2>Contact</h2>
+            <form action="submit_form.php" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+    <section id="team" class="container">
+        <h2>Meet Our Team</h2>
+        <div class="team-gallery">
+            <div class="team-row">
+                <div class="team-member">
+                    <img src="godson.jpg" alt="Team Member 1">
+                    <p>Godson</p>
+                </div>
+                <div class="team-member">
+                    <img src="Elaya_bharathi.jpg" alt="Team Member 2">
+                    <p>Elaya Bharathi</p>
+                </div>
+                <div class="team-member">
+                    <img src="joel.png" alt="Team Member 3">
+                    <p>Joel</p>
+                </div>
+            </div>
+            <div class="team-row">
+                <div class="team-member">
+                    <img src="baskar.jpg" alt="Team Member 4">
+                    <p>Baskar</p>
+                </div>
+                <div class="team-member">
+                    <img src="gladson.jpg" alt="Team Member 5">
+                    <p>Gladson</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <footer>
+        <p>&copy; Voice2Vision. All rights reserved.</p>
+    </footer>
+</body>
+</html>
