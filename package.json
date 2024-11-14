@@ -30,7 +30,7 @@
     "snap": "tap",
     "format": "prettier --write . --log-level warn",
     "typedoc": "typedoc",
-    "build": "tsc"
+    "build": "azure"
   },
   "author": "Isaac Z. Schlueter <i@izs.me> (https://izs.me)",
   "license": "BlueOak-1.0.0",
